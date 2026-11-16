@@ -1,0 +1,18 @@
+seed: 42
+query_source: "synthetic title, price-ceiling, and review-aspect templates derived from real product metadata"
+split: "held-out product ids; train 70%, validation 15%, test 15%"
+catalog_products: 958
+query_rows: 2832
+test_rows: 428
+dense_available: true
+dense_note: "sentence-transformers/all-MiniLM-L6-v2; CPU, normalized embeddings; FAISS IndexFlatIP"
+ranker: "LightGBM LambdaMART; weak metadata labels; best_iteration=1; train_queries=1979; train_groups=1870"
+index_build_seconds: 99.36230040000373
+python_tracemalloc_peak_bytes_during_index: 357373100
+process_rss_bytes_after_index: 217518080
+physical_memory_bytes: 7866085376
+platform: "Windows-11-10.0.26200-SP0"
+processor: "AMD64 Family 23 Model 104 Stepping 1, AuthenticAMD"
+cpu_model_observed: "AMD Ryzen 5 5500U with Radeon Graphics"
+python_version: "3.14.0"
+logical_cpu_count: 12

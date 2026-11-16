@@ -1,0 +1,9 @@
+.git
+.venv
+__pycache__
+*.pyc
+.env
+data/raw
+data/processed
+node_modules
+frontend/dist

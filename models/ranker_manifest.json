@@ -1,0 +1,26 @@
+{
+  "algorithm": "LightGBM LambdaMART",
+  "feature_names": [
+    "rrf_score",
+    "rrf_rank",
+    "query_token_coverage",
+    "category_match",
+    "budget_fit",
+    "catalog_aspect_coverage",
+    "review_aspect_coverage"
+  ],
+  "train_queries": 1979,
+  "validation_queries": 425,
+  "train_groups": 1870,
+  "validation_groups": 394,
+  "train_rows": 134147,
+  "train_positive_labels": 1870,
+  "validation_positive_labels": 394,
+  "label_source": "weak synthetic source-product association; no clicks/purchases",
+  "query_split": "product_group disjoint; train/validation/test = 70/15/15",
+  "best_iteration": 1,
+  "training_seconds": 71.04011409999657,
+  "model_file": "models\\cegr_lambdamart.txt",
+  "model_bytes": 4841,
+  "limitation": "Learns synthetic title/price/aspect template associations only; not customer relevance."
+}

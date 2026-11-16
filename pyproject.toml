@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aisleiq"
+version = "0.1.0"
+description = "Evidence-grounded, constraint-aware product discovery"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.110", "uvicorn[standard]>=0.27", "pydantic>=2.6",
+  "sqlalchemy>=2.0", "pandas>=2.1", "numpy>=1.26", "scikit-learn>=1.4",
+  "python-multipart>=0.0.9", "pydantic-settings>=2.2", "matplotlib>=3.8", "psutil>=5.9"
+]
+
+[project.optional-dependencies]
+semantic = ["sentence-transformers>=3.0", "faiss-cpu>=1.8"]
+ranker = ["lightgbm>=4.0"]
+dev = ["pytest>=8", "httpx>=0.27", "ruff>=0.4"]
+
+[tool.setuptools.packages.find]
+include = ["aisleiq*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
